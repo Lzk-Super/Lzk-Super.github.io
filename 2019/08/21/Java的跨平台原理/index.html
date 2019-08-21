@@ -15,13 +15,14 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="1、是么是平台 Java是可以跨平台的编程语言，那我们首先得知道什么是平台，我们把CPU处理器与操作系统的整体叫平台。 CPU大家都知道，如果计算机是人,那CPU就是人的大脑，它既负责思维运算，又负责身体各部件的命令控制。CPU的种类很多，除去我们熟知的Intel与AMD外，还有比如上面说到的SUN的Sparc,比如IBM的PowerPC等等，这些各个公司生产的CPU使用或相同或不同的指令集。指令">
 <meta property="og:locale" content="en">
+<meta property="og:image" content="http://yoursite.com/2019/08/21/Java的跨平台原理/1.jpg">
 <meta property="og:image" content="http://yoursite.com/2019/08/21/Java的跨平台原理/2.jpg">
 <meta property="og:image" content="http://yoursite.com/2019/08/21/Java的跨平台原理/3.jpg">
-<meta property="og:updated_time" content="2019-08-21T05:18:04.031Z">
+<meta property="og:updated_time" content="2019-08-21T05:20:48.521Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java的跨平台原理">
 <meta name="twitter:description" content="1、是么是平台 Java是可以跨平台的编程语言，那我们首先得知道什么是平台，我们把CPU处理器与操作系统的整体叫平台。 CPU大家都知道，如果计算机是人,那CPU就是人的大脑，它既负责思维运算，又负责身体各部件的命令控制。CPU的种类很多，除去我们熟知的Intel与AMD外，还有比如上面说到的SUN的Sparc,比如IBM的PowerPC等等，这些各个公司生产的CPU使用或相同或不同的指令集。指令">
-<meta name="twitter:image" content="http://yoursite.com/2019/08/21/Java的跨平台原理/2.jpg">
+<meta name="twitter:image" content="http://yoursite.com/2019/08/21/Java的跨平台原理/1.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -185,9 +186,9 @@
 <p>　　知道什么是平台，我们看Java跨平台原理。</p>
 <p>　　2、Java跨平台原理</p>
 <p>首先看一张与C语言有关的图： </p>
-<pre><code>{% asset_img 1.jpg [12] %}
+<img src="/2019/08/21/Java的跨平台原理/1.jpg" title="[12]">
 
-如果您有过C的开发经历，这张图看起来将非常轻松。我们知道，只要是用标准C开发的程序，使用不同的编译器编译后的可执行文件是可以在对应平台运行的，比如windows可以使用VC编译，那编译后的exe文件就可以在windows下运行；liunx下可以使用GCC编译，生成的可执行文件就可以在Liunx上运行。</code></pre><p>到这里请大家思考一个问题：“VC编译的exe能在Liunx上运行吗？”</p>
+<pre><code>如果您有过C的开发经历，这张图看起来将非常轻松。我们知道，只要是用标准C开发的程序，使用不同的编译器编译后的可执行文件是可以在对应平台运行的，比如windows可以使用VC编译，那编译后的exe文件就可以在windows下运行；liunx下可以使用GCC编译，生成的可执行文件就可以在Liunx上运行。</code></pre><p>到这里请大家思考一个问题：“VC编译的exe能在Liunx上运行吗？”</p>
 <p>答案肯定是否定的。使用特定编译器编译的程序只能在对应的平台运行，这里也可以说编译器是与平台相关的，编译后的文件也是与平台相关的。我们说的语言跨平台是编译后的文件跨平台，而不是源程序跨平台，如果是源程序，任何一门语言都是跨平台的语言了。这个如果您不明白，看下面一个案例：</p>
 <p>比 如火星真的有外星人（并且毋庸置疑，火星是韩国人的，火星文也一定是韩国人发明的），就像我们观察蚂蚁一样，火星人默默的观察着我们，有一天，当人类做的 什么事情让火星人实在是看不下去了（比如旺旺老师的书出版了你不买，哈哈，呕吐中，没关系，吐啊吐啊就吐习惯了），所以决定来地球教育我们，但有一个问 题，火星人只会说火星文，地球人理解不了，怎么办啊？找翻译呗（也许非主流可以帮忙，玩笑）！由中文翻译把火星文翻译为中文，英文翻译把火星文翻译为英文 等等等等，但这样问题来了，中文翻译翻译的东西只有中国人能听懂，美国人法国人根本不明白，英文翻译翻译的文章中国人也不明白，也就是语言不能跨平台。</p>
 <p>那上例中，火星文就是C语言，各个国家是平台，中文翻译英文翻译就是对应平台的编译器，编译后的文章就是可执行文件。虽然源文章火星文是与平台无关的，但翻译器是与特定国家相关的，翻译后的文章也是与特定国家相关的。</p>
